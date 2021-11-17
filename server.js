@@ -22,14 +22,34 @@ mongoose.connection
   .on("close", () => console.log("Your are disconnected from mongoose"))
   .on("error", (error) => console.log(error));
 
+
 ///////////////////////////////
 // ROUTES
 ////////////////////////////////
-//testing! 
 
 app.get("/", (req, res) => {
-  res.send("ayyyy");
-});
+    res.send("ayyyy");
+  });
+  
+  
+//  INDEX ROUTE
+  app.get("/restaurant", async (req, res) => {
+    try {
+      res.json(await Restaurant.find({}));
+    } catch (error) {
+      res.status(400).json(error);
+    }
+  });
+  
+// CREATE ROUTE
+  app.post("/restaurant", async (req, res) => {
+    try {
+      res.json(await Restaurant.create(req.body));
+    } catch (error) {
+      res.status(400).json(error);
+    }
+  });
+
 
 ///////////////////////////////
 // LISTENER
