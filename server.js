@@ -27,8 +27,35 @@ mongoose.connection
 
 
 ///////////////////////////////
-// Models
+// User Schema for Authentication
 ////////////////////////////////
+const UserSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+
+  password: {
+    type: String,
+    required: true.valueOf,
+  }
+   
+})
+
+const User = mongoose.model("User", UserSchema)
+
+
+
+///////////////////////////////
+// Items Schema
+////////////////////////////////
+
 
 const ItemSchema = new mongoose.Schema({
   name: {
