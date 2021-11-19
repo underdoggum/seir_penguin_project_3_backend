@@ -5,7 +5,7 @@
 This repo includes an API backend that transmits Seller and Item model data as JSON for use in the React frontend. Users may create, read, update, or delete data, through this API connected to MongoDB.\
 [Deployed frontend](https://unwasted.netlify.app/)\
 [Frontend repo](https://github.com/underdoggum/seir_penguin_project_3_frontend)\
-[Deployed backend](https://unwasted-penguins.herokuapp.com/)
+[Deployed backend](https://unwasted-backend.herokuapp.com/)
 
 ## Dependencies (NPM modules)
 - Dotenv
