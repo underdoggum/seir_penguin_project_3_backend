@@ -51,12 +51,7 @@ const ItemSchema = new mongoose.Schema({
   img: String
 })
 const Item = mongoose.model("Item", ItemSchema)
-///////////////////////////////
-// MIDDLEWARE
-////////////////////////////////
-app.use(cors())
-app.use(morgan("dev"))
-app.use(express.json())
+
 ///////////////////////////////
 // SEED DATA
 ////////////////////////////////
