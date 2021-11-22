@@ -127,6 +127,16 @@ app.get("/items", auth, async (req, res) => {
     res.status(400).json({error})
   }
 })
+
+app.get("/allItems", auth, async (req, res) => {
+  try {
+    res.status(200).json(await Item.find({})) 
+  }
+  catch(error){
+    res.status(400).json({error})
+  }
+})
+
 // SEED route for testing
 app.get("/items/seed", async (req, res) => {
   try {
